@@ -19,15 +19,15 @@ In this paper, we introduce curriculum learning into few-shot KGC and propose a 
 
 ### NELL
     
-* Download dataset [NELL]()
+* Download dataset [NELL](https://sites.cs.ucsb.edu/~xwhan/datasets/nell.tar.gz)
 
-* Download pre-trained [embedding]()
+* Download pre-trained [embedding](https://drive.google.com/file/d/1XXvYpTSTyCnN-PBdUkWBXwXBI99Chbps/view)
     
 ### wiki-data
 
-* Download dataset [wiki]()
+* Download dataset [wiki](https://sites.cs.ucsb.edu/~xwhan/datasets/wiki.tar.gz)
 
-* Download pre-trained [embedding]()
+* Download pre-trained [embedding](https://drive.google.com/file/d/1_3HBJde2KVMhBgJeGN1-wyvW88gRU1iL/view)
 
 ## FB15K237
 
