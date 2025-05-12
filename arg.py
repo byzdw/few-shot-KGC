@@ -30,7 +30,8 @@ def read_options():
 
     parser.add_argument("--seed", default='19950922', type=int)
     parser.add_argument("--loss", default='origin', type=str)
-
+    parser.add_argument("--kge_epochs", default=100, type=int)
+    parser.add_argument("--gnn_epochs", default=100, type=int)
     parser.add_argument("--num_transformer_layers", default=3, type=int)
     parser.add_argument("--num_transformer_heads", default=4, type=int)
     parser.add_argument("--warm_up_step", default=10000, type=int)
