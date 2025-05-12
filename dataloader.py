@@ -13,19 +13,14 @@ def train_generate(dataset, batch_size, few, symbol2id, ent2id, e1rel_e2):
     logging.info('Loading Train Data')
     train_tasks = json.load(open(dataset + '/train_tasks.json'))
     logging.info('Loading Candidates')
-    rel2candidates = json.load(open(dataset + '/rel2candidates.json'))
     task_pool = list(train_tasks.keys())
     num_tasks = len(task_pool)
 
     rel_idx = 0
     while True:
-        if rel_idx % num_tasks == 0:
-            random.shuffle(task_pool)  # shuffle task order
-        task_choice = task_pool[rel_idx % num_tasks]  # choose a rel task
+        task_choice = task_pool[rel_idx]  # choose a rel task
         rel_idx += 1
         candidates = rel2candidates[task_choice]
-        if len(candidates) <= 20:
-            continue
         task_triples = train_tasks[task_choice]
         random.shuffle(task_triples)
         # select support set, len = few
@@ -59,8 +54,7 @@ def train_generate(dataset, batch_size, few, symbol2id, ent2id, e1rel_e2):
             rel = triple[1]
             e_t = triple[2]
             while True:
-                # noise = random.choice(candidates)  # select noise from candidates
-                noise = random.choice(false_entities_list)
+                noise = random.choice()
                 if (noise not in e1rel_e2[e_h + rel]) \
                         and noise != e_t:
                     break
