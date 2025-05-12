@@ -31,12 +31,15 @@ In this paper, we introduce curriculum learning into few-shot KGC and propose a 
 
 ## FB15K237
 
-* Download dataset [fb15k237]()
+* Download dataset [fb15k237](https://drive.google.com/drive/folders/1vN1AMapGZaUnQ4c7gPiBmO_nB6vvhj1c)
 
 ## umls
 
-* Download dataset [umls]()
+* Download dataset [umls](https://github.com/liuran998/RelAdapter/tree/main/RelAdapter/umls)
+* 
 
 # Quick Start
-
+```
+python trainer.py --weight_decay 0.0 --prefix nell.5shot
+```
 
