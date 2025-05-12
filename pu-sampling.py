@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-
+import random
 
 def pu_bagging(tu, kp, iZemb):
     obs_votes = defaultdict(list)
@@ -61,3 +61,25 @@ def generate_accelerated_windows(data, window_size, initial_velocity, total_step
             break
     
     return batches
+
+
+
+def replace_elements_with_ratio(batches, data, ratio):
+    result_batches = [batch.copy() for batch in batches]
+    for i, batch in enumerate(result_batches):
+        window_size = len(batch)
+        replace_count = int(window_size * ratio)
+        current_window_set = set(batch)
+
+        outside_elements = [x for j, x in enumerate(data) if j < i * window_size or j >= (i + 1) * window_size]
+
+        if len(outside_elements) < replace_count:
+            outside_elements = [x for j, x in enumerate(data) if j not in range(i * window_size, (i + 1) * window_size)]
+        
+        replace_indices = random.sample(range(window_size), min(replace_count, len(outside_elements)))
+        for idx in replace_indices:
+            replacement = random.choice(outside_elements)
+            batch[idx] = replacement
+            outside_elements.remove(replacement)
+    
+    return result_batches
