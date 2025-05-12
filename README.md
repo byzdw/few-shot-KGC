@@ -36,7 +36,6 @@ In this paper, we introduce curriculum learning into few-shot KGC and propose a 
 ## umls
 
 * Download dataset [umls](https://github.com/liuran998/RelAdapter/tree/main/RelAdapter/umls)
-* 
 
 # Quick Start
 ```
