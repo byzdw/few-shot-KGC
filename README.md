@@ -37,3 +37,6 @@ In this paper, we introduce curriculum learning into few-shot KGC and propose a 
 
 * Download dataset [umls]()
 
+# Quick Start
+
+
