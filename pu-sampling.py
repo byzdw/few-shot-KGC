@@ -1,4 +1,6 @@
 import numpy as np
+from sklearn.linear_model import LogisticRegression
+
 
 def pu_bagging(tu, kp, iZemb):
     obs_votes = defaultdict(list)
