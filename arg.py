@@ -37,7 +37,7 @@ def read_options():
     parser.add_argument("--max_batches", default=250000, type=int)
     parser.add_argument("--weight_decay", default=0.0001, type=float)
     parser.add_argument("--grad_clip", default=5.0, type=float)
-
+    parser.add_argument("--total_rounds", default=4000, type=int)
     parser.add_argument("--v_0", type=float)
     parser.add_argument("--lambda", default=1.0, type=float)
     parser.add_argument("--varepsilon", default=0.1, type=float)
